@@ -299,9 +299,9 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 
 <h2 id="1-背景："><a href="#1-背景：" class="headerlink" title="1.背景："></a>1.背景：</h2><ul>
-<li>单核cpu时，两个多线程同时执行死循环，此时cpu会被充分利用（good）<br><img src="%E5%8D%95%E6%A0%B8%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%AD%BB%E5%BE%AA%E7%8E%AF.jpg" alt="单核多线程"></li>
-<li>双核cpu时，两个多线程同时执行死循环，此时cpu会被不充分利用（bad）<br><img src="%E4%B8%A4%E6%A0%B8%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%AD%BB%E5%BE%AA%E7%8E%AF.jpg" alt="双核多线程"></li>
-<li>双核cpu时，两个多进程同时执行死循环，此时cpu会被会充分利用<br><img src="%E4%B8%A4%E6%A0%B8%E5%A4%9A%E8%BF%9B%E7%A8%8B%E6%AD%BB%E5%BE%AA%E7%8E%AF.jpg" alt="双核多进程"></li>
+<li>单核cpu时，两个多线程同时执行死循环，此时cpu会被充分利用（good）<br><img src="/2020/04/17/GIL/%E5%8D%95%E6%A0%B8%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%AD%BB%E5%BE%AA%E7%8E%AF.jpg" alt="单核多线程"></li>
+<li>双核cpu时，两个多线程同时执行死循环，此时cpu会被不充分利用（bad）<br><img src="/2020/04/17/GIL/%E4%B8%A4%E6%A0%B8%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%AD%BB%E5%BE%AA%E7%8E%AF.jpg" alt="双核多线程"></li>
+<li>双核cpu时，两个多进程同时执行死循环，此时cpu会被会充分利用<br><img src="/2020/04/17/GIL/%E4%B8%A4%E6%A0%B8%E5%A4%9A%E8%BF%9B%E7%A8%8B%E6%AD%BB%E5%BE%AA%E7%8E%AF.jpg" alt="双核多进程"></li>
 </ul>
 <h2 id="2-什么是GIL"><a href="#2-什么是GIL" class="headerlink" title="2.什么是GIL"></a>2.什么是GIL</h2><p>GIL（Global Interpreter Lock）全局解释器锁： 每个线程在cpu中执行时，都要先上GIL，保证同一时刻只有一个线程在执行，也就是说，同一时刻只有一个线程在cpu上执行；不是真正意义上的多线程同时执行</p>
 <p>python的发明者，只考虑当时的单核cpu，解决多线程之间数据完整性和状态同步的最简单方法自然就是加锁， 于是有了GIL这把超级大锁。因为cpython解析只允许拥有GIL全局解析器锁才能运行程序，这样就保证了保证同一个时刻只允许一个线程可以使用cpu。所以就产生了多线程执行程序的速度不快，反而多进程比多线性还快，</p>
