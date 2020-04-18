@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://beyounger.online/2020/04/18/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84blog%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B(%E4%BA%8C)/%E7%BC%BA%E5%A4%B1%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9B%BE%E7%89%87.png">
 <meta property="article:published_time" content="2020-04-18T05:56:48.000Z">
-<meta property="article:modified_time" content="2020-04-18T07:04:19.322Z">
+<meta property="article:modified_time" content="2020-04-18T07:27:22.522Z">
 <meta property="article:author" content="向上吧！少年">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -271,7 +271,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">720字</span>
+        <span class="post-count">1.1k字</span>
       </span>
     </span>
 
@@ -280,7 +280,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
@@ -324,20 +324,17 @@ var _hmt = _hmt || [];
 &lt;/nav&gt;</code></pre><p>加上这个：</p>
 <pre><code>&lt;nav&gt;
     总文章数 &lt;%=site.posts.length%&gt;
-&lt;/nav&gt;</code></pre><h3 id="9-怎么置顶文章"><a href="#9-怎么置顶文章" class="headerlink" title="9.怎么置顶文章"></a>9.怎么置顶文章</h3><ol>
-<li><p>安装插件 </p>
-<p> npm uninstall hexo-generator-index –save<br> npm install hexo-generator-index-pin-top –save</p>
-</li>
-<li><p>配置置顶标准<br>打开：/themes/*/layout（/_macro）/post.ejs 直接在最前面加入以下代码即可   </p>
-<p> &lt;% if (page.top) { %&gt;<br>   <i class="fa fa-thumb-tack"></i><br>   <font color="7D26CD">置顶</font><br>   <span class="post-meta-divider">|</span><br> &lt;% } %&gt;</p>
-</li>
-</ol>
-<ol start="3">
-<li><p>配置文章<br>然后在需要置顶的文章的Front-matter中加上top选项即可 top后面的数字越大，优先级越高</p>
-<p> title: 2019<br> date: 2019-02-14 16:10:03<br> top: 5   </p>
-</li>
-</ol>
-<h3 id="10-修改代码块样式"><a href="#10-修改代码块样式" class="headerlink" title="10.修改代码块样式"></a>10.修改代码块样式</h3><p>直接修改编译好的文件。路径为： <code>theme/yilia/source/main.0cf68a.css</code></p>
+&lt;/nav&gt;</code></pre><h3 id="9-怎么置顶文章"><a href="#9-怎么置顶文章" class="headerlink" title="9.怎么置顶文章"></a>9.怎么置顶文章</h3><p>1.安装插件 </p>
+<pre><code>npm uninstall hexo-generator-index --save  
+npm install hexo-generator-index-pin-top --save</code></pre><p>2.配置置顶标准<br>打开：/themes/*/layout（/_macro）/post.ejs 直接在最前面加入以下代码即可   </p>
+<pre><code>&lt;% if (page.top) { %&gt;
+  &lt;i class=&quot;fa fa-thumb-tack&quot;&gt;&lt;/i&gt;
+  &lt;font color=7D26CD&gt;置顶&lt;/font&gt;
+  &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;
+&lt;% } %&gt;</code></pre><p>3.配置文章<br>然后在需要置顶的文章的Front-matter中加上top选项即可 top后面的数字越大，优先级越高</p>
+<pre><code>title: 2019    
+date: 2019-02-14 16:10:03   
+top: 5   </code></pre><h3 id="10-修改代码块样式"><a href="#10-修改代码块样式" class="headerlink" title="10.修改代码块样式"></a>10.修改代码块样式</h3><p>直接修改编译好的文件。路径为： <code>theme/yilia/source/main.0cf68a.css</code></p>
 <ul>
 <li><p>修改代码背景色，  搜索 .article-entry .highlight, 修改background后面的颜色<code>pre{background:#272822;</code>改为<br><code>pre{background:#1a0139;</code></p>
 </li>
@@ -346,7 +343,17 @@ var _hmt = _hmt || [];
 <li><p>修改代码字体颜色<code>article-entry .highlight .line{color:#fff;</code>修改为<code>.article-entry .highlight .line{color:#00ff0d;</code>将<code>white-space:pre-wrap;</code> 删除.这个问题是自动换行造成的，使用不自动换行的<code>white-space:pre</code>;样式代码块部分会自动出现底部滚动条，行号错乱问题就没有了。</p>
 </li>
 </ul>
-<h3 id="11-文章显示目录"><a href="#11-文章显示目录" class="headerlink" title="11.文章显示目录"></a>11.文章显示目录</h3><h3 id="12-添加菜单"><a href="#12-添加菜单" class="headerlink" title="12.添加菜单"></a>12.添加菜单</h3><h3 id="13-添加不蒜子统计"><a href="#13-添加不蒜子统计" class="headerlink" title="13.添加不蒜子统计"></a>13.添加不蒜子统计</h3><h3 id="14"><a href="#14" class="headerlink" title="14."></a>14.</h3>
+<h3 id="11-文章显示目录"><a href="#11-文章显示目录" class="headerlink" title="11.文章显示目录"></a>11.文章显示目录</h3><p>增加文章目录 TOC(table of content )，方便阅读文章, 在 themes/yilia/_config.ym中进行配置 toc: 2即可，它会将你 Markdown 语法的标题，生成目录，目录查看在右下角。</p>
+<h3 id="12-添加菜单"><a href="#12-添加菜单" class="headerlink" title="12.添加菜单"></a>12.添加菜单</h3><p>修改 themes/yilia/_config.yml<br>    menu:<br>      个人主页: /<br>      生活随笔: /tags/随笔/<br>      学习笔记: /tags/笔记/<br>      所有文章: /archives/index.html</p>
+<h3 id="13-添加不蒜子统计"><a href="#13-添加不蒜子统计" class="headerlink" title="13.添加不蒜子统计"></a>13.添加不蒜子统计</h3><p>利用这个统计，可以知道你博客的访问量，访客数<br>修改 themes\yilia\layout_partial\footer.ejs，包括访客数和站点访问总量  </p>
+<pre><code>&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;  &lt;i class=&quot;icon ion-pie-graph&quot;&gt;&lt;/i&gt;  访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt; &lt;i class=&quot;icon ion-person&quot;&gt;&lt;/i&gt; 访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;    </code></pre><p>在需要显示的地方添加</p>
+<pre><code># 使用 pv 记录方式，每访问一次，记录一次
+&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</code></pre><h3 id="14-添加valine评论系统"><a href="#14-添加valine评论系统" class="headerlink" title="14.添加valine评论系统"></a>14.添加valine评论系统</h3><p> 参考一下：<a href="https://blog.csdn.net/qq_43827595/article/details/101450966" target="_blank" rel="noopener" title="csdn">https://blog.csdn.net/qq_43827595/article/details/101450966</a></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>总之，yilia还可以优化，可以添加丰富的插件，比如，添加看板娘，天气预报，网易云音乐等。其他的可以网上搜索完善就行了</p>
+
       
 	  
 	  
@@ -472,7 +479,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装yilia"><span class="toc-number">1.</span> <span class="toc-text">1.安装yilia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-使用yilia"><span class="toc-number">2.</span> <span class="toc-text">2.使用yilia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-查看所有文章，提示缺失模块"><span class="toc-number">3.</span> <span class="toc-text">3.查看所有文章，提示缺失模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-配置图片资源"><span class="toc-number">4.</span> <span class="toc-text">4.配置图片资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-文章如何显示摘要"><span class="toc-number">5.</span> <span class="toc-text">5.文章如何显示摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-微信分享文章异常"><span class="toc-number">6.</span> <span class="toc-text">6.微信分享文章异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-所有文章无法显示"><span class="toc-number">7.</span> <span class="toc-text">7.所有文章无法显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-在左侧显示总文章数"><span class="toc-number">8.</span> <span class="toc-text">8.在左侧显示总文章数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-怎么置顶文章"><span class="toc-number">9.</span> <span class="toc-text">9.怎么置顶文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-修改代码块样式"><span class="toc-number">10.</span> <span class="toc-text">10.修改代码块样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-文章显示目录"><span class="toc-number">11.</span> <span class="toc-text">11.文章显示目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-添加菜单"><span class="toc-number">12.</span> <span class="toc-text">12.添加菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-添加不蒜子统计"><span class="toc-number">13.</span> <span class="toc-text">13.添加不蒜子统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14"><span class="toc-number">14.</span> <span class="toc-text">14.</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装yilia"><span class="toc-number">1.</span> <span class="toc-text">1.安装yilia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-使用yilia"><span class="toc-number">2.</span> <span class="toc-text">2.使用yilia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-查看所有文章，提示缺失模块"><span class="toc-number">3.</span> <span class="toc-text">3.查看所有文章，提示缺失模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-配置图片资源"><span class="toc-number">4.</span> <span class="toc-text">4.配置图片资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-文章如何显示摘要"><span class="toc-number">5.</span> <span class="toc-text">5.文章如何显示摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-微信分享文章异常"><span class="toc-number">6.</span> <span class="toc-text">6.微信分享文章异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-所有文章无法显示"><span class="toc-number">7.</span> <span class="toc-text">7.所有文章无法显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-在左侧显示总文章数"><span class="toc-number">8.</span> <span class="toc-text">8.在左侧显示总文章数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-怎么置顶文章"><span class="toc-number">9.</span> <span class="toc-text">9.怎么置顶文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-修改代码块样式"><span class="toc-number">10.</span> <span class="toc-text">10.修改代码块样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-文章显示目录"><span class="toc-number">11.</span> <span class="toc-text">11.文章显示目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-添加菜单"><span class="toc-number">12.</span> <span class="toc-text">12.添加菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-添加不蒜子统计"><span class="toc-number">13.</span> <span class="toc-text">13.添加不蒜子统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-添加valine评论系统"><span class="toc-number">14.</span> <span class="toc-text">14.添加valine评论系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">15.</span> <span class="toc-text">总结</span></a></li></ol>
                     </div>
                 </span>
             </div>
