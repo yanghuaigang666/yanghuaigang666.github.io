@@ -127,6 +127,10 @@ var _hmt = _hmt || [];
 	        
 			</ul>
 		</nav>
+	<nav>
+    总文章数 11
+		</nav>
+
 		<nav class="header-smart-menu">
     		
     			
@@ -234,6 +238,131 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-基于hexo的blog搭建教程(二)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">  
+    
+      <header class="article-header">
+	  
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/18/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84blog%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B(%E4%BA%8C)/">基于hexo的blog搭建教程(二)</a>
+    </h1>
+  
+ 
+		
+		  
+		
+	
+		
+        
+        <a href="/2020/04/18/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84blog%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B(%E4%BA%8C)/" class="archive-article-date">
+  	<time datetime="2020-04-18T05:56:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-18</time>
+</a>
+        
+		
+		<!-- 开始添加字数统计-->
+        
+        <!-- 添加完成 -->
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+
+<h3 id="1-安装yilia"><a href="#1-安装yilia" class="headerlink" title="1.安装yilia"></a>1.安装yilia</h3><pre><code>git clone http://github.com/litten/hexo-theme-yilia.git themes/yilia</code></pre><h3 id="2-使用yilia"><a href="#2-使用yilia" class="headerlink" title="2.使用yilia"></a>2.使用yilia</h3><p>修改站点配置文件 _config.yml，修改为如下代码： <code>theme: yilia</code></p>
+<h3 id="3-查看所有文章，提示缺失模块"><a href="#3-查看所有文章，提示缺失模块" class="headerlink" title="3.查看所有文章，提示缺失模块"></a>3.查看所有文章，提示缺失模块</h3><p><img src="/2020/04/18/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84blog%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B(%E4%BA%8C)/%E7%BC%BA%E5%A4%B1%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9B%BE%E7%89%87.png" alt="缺失模块的图片"><br>按照提示，去完成步骤,注意_config.yml 路径是指 根目录下的，而非 yilia 主题下的 config文件</p>
+<h3 id="4-配置图片资源"><a href="#4-配置图片资源" class="headerlink" title="4.配置图片资源"></a>4.配置图片资源</h3><ol>
+<li>添加图片资源文件夹。 路径为 themes/yilia/source/下，可添加一个 assets 文件夹，里面存放图片资源即可  </li>
+<li>配置文件中直接引用即可。路径为 themes/yilia/_config.yml，找到如下即可<blockquote>
+<p>微信二维码图片<br>weixin:  /assets/img/wechat.png</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>头像图片<br>avatar:  /assets/img/head.jpg</p>
+</blockquote>
+<blockquote>
+<p>网页图标<br>favicon:  /assets/img/head.jpg</p>
+</blockquote>
+<h3 id="5-文章如何显示摘要"><a href="#5-文章如何显示摘要" class="headerlink" title="5.文章如何显示摘要"></a>5.文章如何显示摘要</h3><pre><code>问题:点击主页时，发现所有文章都是全文显示，不利于查找，可控制显示的字数
+
+解决办法: 在你 MD 格式文章正文插入 &lt;!-- more--&gt;即可，只会显示它之前的，此后的就不显示，点击文章标题，全文阅读才可看到，同时注释掉以下 themes/yilia/_config.yml，
+            # excerpt_link: more</code></pre><h3 id="6-微信分享文章异常"><a href="#6-微信分享文章异常" class="headerlink" title="6.微信分享文章异常"></a>6.微信分享文章异常</h3><h3 id="7-所有文章无法显示"><a href="#7-所有文章无法显示" class="headerlink" title="7.所有文章无法显示"></a>7.所有文章无法显示</h3><h3 id="8-在左侧显示总文章数"><a href="#8-在左侧显示总文章数" class="headerlink" title="8.在左侧显示总文章数"></a>8.在左侧显示总文章数</h3><h3 id="9-怎么置顶文章"><a href="#9-怎么置顶文章" class="headerlink" title="9.怎么置顶文章"></a>9.怎么置顶文章</h3><h3 id="10-修改代码块样式"><a href="#10-修改代码块样式" class="headerlink" title="10.修改代码块样式"></a>10.修改代码块样式</h3><p>直接修改编译好的文件。路径为： <code>theme/yilia/source/main.0cf68a.css</code></p>
+<ul>
+<li><p>修改代码背景色，  搜索 .article-entry .highlight, 修改background后面的颜色<code>pre{background:#272822;</code>改为<br><code>pre{background:#1a0139;</code></p>
+</li>
+<li><p>修改行号颜色，搜索 .article-entry .highlight .gutter pre .line将<code>.article-entry .highlight .gutter pre .line{color:#666</code>改为 <code>.article-entry .highlight .gutter pre .line{color:#fc0000</code></p>
+</li>
+<li><p>修改代码字体颜色<code>article-entry .highlight .line{color:#fff;</code>修改为<code>.article-entry .highlight .line{color:#00ff0d;</code>将<code>white-space:pre-wrap;</code> 删除.这个问题是自动换行造成的，使用不自动换行的<code>white-space:pre</code>;样式代码块部分会自动出现底部滚动条，行号错乱问题就没有了。</p>
+</li>
+</ul>
+<h3 id="11-文章显示目录"><a href="#11-文章显示目录" class="headerlink" title="11.文章显示目录"></a>11.文章显示目录</h3><h3 id="12-添加菜单"><a href="#12-添加菜单" class="headerlink" title="12.添加菜单"></a>12.添加菜单</h3><h3 id="13-添加不蒜子统计"><a href="#13-添加不蒜子统计" class="headerlink" title="13.添加不蒜子统计"></a>13.添加不蒜子统计</h3><h3 id="14"><a href="#14" class="headerlink" title="14."></a>14.</h3>
+      
+	  
+	  
+	  
+	  
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">9</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/18/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84blog%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B(%E4%BA%8C)/">阅读更多 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
   
     <article id="post-基于hexo的blog搭建教程(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">  
@@ -1113,103 +1242,10 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-我的第二篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">  
-    
-      <header class="article-header">
-	  
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第二篇博客</a>
-    </h1>
-  
- 
-		
-		  
-		
-	
-		
-        
-        <a href="/2019/12/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-12-27T05:10:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
-</a>
-        
-		
-		<!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-		
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文开发一个作业管理系统，系统分为教师端，学生端和管理员端，实现了课程管理，学生管理，作业管理，自定义考试和课程讨论等功能。软件界面灵活，操作简单,系统较好的实现了在线作业的功能，有助于引导学生平时的学习，对老师的课堂教学有一定的辅助作用。</p>
-        
-      
-	  
-	  
-	  
-	  
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">阅读更多 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -1323,6 +1359,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">9</a>
               </li>
              
               <li class="article-tag-list-item">
