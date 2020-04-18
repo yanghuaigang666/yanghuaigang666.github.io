@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://beyounger.online/2020/04/18/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84blog%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B(%E4%BA%8C)/%E7%BC%BA%E5%A4%B1%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9B%BE%E7%89%87.png">
 <meta property="article:published_time" content="2020-04-18T05:56:48.000Z">
-<meta property="article:modified_time" content="2020-04-18T06:41:09.070Z">
+<meta property="article:modified_time" content="2020-04-18T07:04:19.322Z">
 <meta property="article:author" content="向上吧！少年">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -271,7 +271,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">525字</span>
+        <span class="post-count">720字</span>
       </span>
     </span>
 
@@ -280,7 +280,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -313,7 +313,31 @@ var _hmt = _hmt || [];
 <h3 id="5-文章如何显示摘要"><a href="#5-文章如何显示摘要" class="headerlink" title="5.文章如何显示摘要"></a>5.文章如何显示摘要</h3><pre><code>问题:点击主页时，发现所有文章都是全文显示，不利于查找，可控制显示的字数
 
 解决办法: 在你 MD 格式文章正文插入 &lt;!-- more--&gt;即可，只会显示它之前的，此后的就不显示，点击文章标题，全文阅读才可看到，同时注释掉以下 themes/yilia/_config.yml，
-            # excerpt_link: more</code></pre><h3 id="6-微信分享文章异常"><a href="#6-微信分享文章异常" class="headerlink" title="6.微信分享文章异常"></a>6.微信分享文章异常</h3><h3 id="7-所有文章无法显示"><a href="#7-所有文章无法显示" class="headerlink" title="7.所有文章无法显示"></a>7.所有文章无法显示</h3><h3 id="8-在左侧显示总文章数"><a href="#8-在左侧显示总文章数" class="headerlink" title="8.在左侧显示总文章数"></a>8.在左侧显示总文章数</h3><h3 id="9-怎么置顶文章"><a href="#9-怎么置顶文章" class="headerlink" title="9.怎么置顶文章"></a>9.怎么置顶文章</h3><h3 id="10-修改代码块样式"><a href="#10-修改代码块样式" class="headerlink" title="10.修改代码块样式"></a>10.修改代码块样式</h3><p>直接修改编译好的文件。路径为： <code>theme/yilia/source/main.0cf68a.css</code></p>
+            # excerpt_link: more</code></pre><h3 id="6-微信分享文章异常"><a href="#6-微信分享文章异常" class="headerlink" title="6.微信分享文章异常"></a>6.微信分享文章异常</h3><h3 id="7-所有文章无法显示"><a href="#7-所有文章无法显示" class="headerlink" title="7.所有文章无法显示"></a>7.所有文章无法显示</h3><p>themes\yilia\ _config.yml文件里面的<code>mathjax: true</code>改为<code>mathjax: true</code></p>
+<h3 id="8-在左侧显示总文章数"><a href="#8-在左侧显示总文章数" class="headerlink" title="8.在左侧显示总文章数"></a>8.在左侧显示总文章数</h3><p>将themes\yilia\layout_partial\left-col.ejs文件的</p>
+<pre><code>&lt;nav class=&quot;header-menu&quot;&gt;
+    &lt;ul&gt;
+    &lt;% for (var i in theme.menu){ %&gt;
+        &lt;li&gt;&lt;a href=&quot;&lt;%- url_for(theme.menu[i]) %&gt;&quot;&gt;&lt;%= i %&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;%}%&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre><p>加上这个：</p>
+<pre><code>&lt;nav&gt;
+    总文章数 &lt;%=site.posts.length%&gt;
+&lt;/nav&gt;</code></pre><h3 id="9-怎么置顶文章"><a href="#9-怎么置顶文章" class="headerlink" title="9.怎么置顶文章"></a>9.怎么置顶文章</h3><ol>
+<li><p>安装插件 </p>
+<p> npm uninstall hexo-generator-index –save<br> npm install hexo-generator-index-pin-top –save</p>
+</li>
+<li><p>配置置顶标准<br>打开：/themes/*/layout（/_macro）/post.ejs 直接在最前面加入以下代码即可   </p>
+<p> &lt;% if (page.top) { %&gt;<br>   <i class="fa fa-thumb-tack"></i><br>   <font color="7D26CD">置顶</font><br>   <span class="post-meta-divider">|</span><br> &lt;% } %&gt;</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>配置文章<br>然后在需要置顶的文章的Front-matter中加上top选项即可 top后面的数字越大，优先级越高</p>
+<p> title: 2019<br> date: 2019-02-14 16:10:03<br> top: 5   </p>
+</li>
+</ol>
+<h3 id="10-修改代码块样式"><a href="#10-修改代码块样式" class="headerlink" title="10.修改代码块样式"></a>10.修改代码块样式</h3><p>直接修改编译好的文件。路径为： <code>theme/yilia/source/main.0cf68a.css</code></p>
 <ul>
 <li><p>修改代码背景色，  搜索 .article-entry .highlight, 修改background后面的颜色<code>pre{background:#272822;</code>改为<br><code>pre{background:#1a0139;</code></p>
 </li>
@@ -405,7 +429,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://beyounger.onlineine/2020/04/18/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84blog%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B(%E4%BA%8C)/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://beyounger.online/ine/2020/04/18/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84blog%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B(%E4%BA%8C)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -596,15 +620,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">英语</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">英语</a>
               </li>
              
               <li class="article-tag-list-item">
