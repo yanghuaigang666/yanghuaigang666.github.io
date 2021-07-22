@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>向上吧！少年</title>
+  
+  <subtitle>From Zero To Hero</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yanghuaigang666.github.io/"/>
+  <updated>2020-04-20T14:09:16.000Z</updated>
+  <id>http://yanghuaigang666.github.io/</id>
+  
+  <author>
+    <name>Beyounger</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的第一篇博客</title>
+    <link href="http://yanghuaigang666.github.io/posts/63785.html"/>
+    <id>http://yanghuaigang666.github.io/posts/63785.html</id>
+    <published>2021-07-22T01:15:40.174Z</published>
+    <updated>2020-04-20T14:09:16.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本系统采用Python[1]语言和 Redis[2]数据库，运用Django[3]框架进行项目开发，提高编程效率&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="笔记" scheme="http://yanghuaigang666.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yanghuaigang666.github.io/posts/16107.html"/>
+    <id>http://yanghuaigang666.github.io/posts/16107.html</id>
+    <published>2021-07-22T01:15:40.120Z</published>
+    <updated>2020-04-20T14:09:16.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="http://yanghuaigang666.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>text</title>
+    <link href="http://yanghuaigang666.github.io/posts/51241.html"/>
+    <id>http://yanghuaigang666.github.io/posts/51241.html</id>
+    <published>2021-07-22T00:51:22.000Z</published>
+    <updated>2021-07-22T00:52:41.083Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;撒大声地所&quot;&gt;&lt;a href=&quot;#撒大声地所&quot; class=&quot;headerlink&quot; title=&quot;撒大声地所&quot;&gt;&lt;/a&gt;撒大声地所&lt;/h1&gt;&lt;h1 id=&quot;sddsds&quot;&gt;&lt;a href=&quot;#sddsds&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="http://yanghuaigang666.github.io/categories/AI/"/>
+    
+    
+      <category term="机器学习" scheme="http://yanghuaigang666.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>串</title>
+    <link href="http://yanghuaigang666.github.io/posts/17074.html"/>
+    <id>http://yanghuaigang666.github.io/posts/17074.html</id>
+    <published>2020-06-07T09:04:50.000Z</published>
+    <updated>2020-06-17T00:46:57.480Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-生成一个其值等于chars的串T&quot;&gt;&lt;a href=&quot;#1-生成一个其值等于chars的串T&quot; class=&quot;headerlink&quot; title=&quot;1. 生成一个其值等于chars的串T&quot;&gt;&lt;/a&gt;1. 生成一个其值等于chars的串T&lt;/h4&gt;&lt;pre
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一元多项式</title>
+    <link href="http://yanghuaigang666.github.io/posts/53259.html"/>
+    <id>http://yanghuaigang666.github.io/posts/53259.html</id>
+    <published>2020-06-07T08:56:40.000Z</published>
+    <updated>2020-06-17T00:46:57.478Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-存储结构表示&quot;&gt;&lt;a href=&quot;#1-存储结构表示&quot; class=&quot;headerlink&quot; title=&quot;1.存储结构表示&quot;&gt;&lt;/a&gt;1.存储结构表示&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github代码托管</title>
+    <link href="http://yanghuaigang666.github.io/posts/61831.html"/>
+    <id>http://yanghuaigang666.github.io/posts/61831.html</id>
+    <published>2020-06-06T01:56:58.000Z</published>
+    <updated>2020-06-06T07:33:14.466Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-创建仓库&quot;&gt;&lt;a href=&quot;#1-创建仓库&quot; class=&quot;headerlink&quot; title=&quot;1. 创建仓库&quot;&gt;&lt;/a&gt;1. 创建仓库&lt;/h4&gt;&lt;p&gt;在github上new repository&lt;/p&gt;
+&lt;h4 id=&quot;2-添加ssh密钥&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yanghuaigang666.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://yanghuaigang666.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git分支管理</title>
+    <link href="http://yanghuaigang666.github.io/posts/50976.html"/>
+    <id>http://yanghuaigang666.github.io/posts/50976.html</id>
+    <published>2020-06-06T01:56:29.000Z</published>
+    <updated>2020-06-06T07:33:14.476Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-创建与合并分支&quot;&gt;&lt;a href=&quot;#1-创建与合并分支&quot; class=&quot;headerlink&quot; title=&quot;1. 创建与合并分支&quot;&gt;&lt;/a&gt;1.
+        
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yanghuaigang666.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://yanghuaigang666.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git版本管理</title>
+    <link href="http://yanghuaigang666.github.io/posts/44942.html"/>
+    <id>http://yanghuaigang666.github.io/posts/44942.html</id>
+    <published>2020-06-06T01:55:44.000Z</published>
+    <updated>2020-06-06T07:33:14.466Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-git简介&quot;&gt;&lt;a href=&quot;#1-git简介&quot; class=&quot;headerlink&quot; title=&quot;1. git简介&quot;&gt;&lt;/a&gt;1.
+        
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yanghuaigang666.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://yanghuaigang666.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>斐波拉契数列</title>
+    <link href="http://yanghuaigang666.github.io/posts/2560.html"/>
+    <id>http://yanghuaigang666.github.io/posts/2560.html</id>
+    <published>2020-06-05T15:58:13.000Z</published>
+    <updated>2020-06-05T16:01:39.768Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-递归实现&quot;&gt;&lt;a href=&quot;#1-递归实现&quot; class=&quot;headerlink&quot; title=&quot;1.递归实现&quot;&gt;&lt;/a&gt;1.递归实现&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>链式队列</title>
+    <link href="http://yanghuaigang666.github.io/posts/21414.html"/>
+    <id>http://yanghuaigang666.github.io/posts/21414.html</id>
+    <published>2020-06-05T15:45:06.000Z</published>
+    <updated>2020-06-05T16:01:39.770Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-存储结构表示&quot;&gt;&lt;a href=&quot;#1-存储结构表示&quot; class=&quot;headerlink&quot; title=&quot;1.存储结构表示&quot;&gt;&lt;/a&gt;1.存储结构表示&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>循环队列</title>
+    <link href="http://yanghuaigang666.github.io/posts/220.html"/>
+    <id>http://yanghuaigang666.github.io/posts/220.html</id>
+    <published>2020-06-05T15:33:18.000Z</published>
+    <updated>2020-06-05T16:01:39.765Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-顺序存储结构&quot;&gt;&lt;a href=&quot;#1-顺序存储结构&quot; class=&quot;headerlink&quot; title=&quot;1.顺序存储结构&quot;&gt;&lt;/a&gt;1.顺序存储结构&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>链式栈</title>
+    <link href="http://yanghuaigang666.github.io/posts/19776.html"/>
+    <id>http://yanghuaigang666.github.io/posts/19776.html</id>
+    <published>2020-06-04T11:37:39.000Z</published>
+    <updated>2020-06-04T11:57:45.088Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-链栈存储结构&quot;&gt;&lt;a href=&quot;#1-链栈存储结构&quot; class=&quot;headerlink&quot; title=&quot;1.链栈存储结构&quot;&gt;&lt;/a&gt;1.链栈存储结构&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两栈共享空间</title>
+    <link href="http://yanghuaigang666.github.io/posts/46339.html"/>
+    <id>http://yanghuaigang666.github.io/posts/46339.html</id>
+    <published>2020-06-04T11:21:52.000Z</published>
+    <updated>2020-06-04T11:57:51.051Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-共享栈存储结构表示&quot;&gt;&lt;a href=&quot;#1-共享栈存储结构表示&quot; class=&quot;headerlink&quot; title=&quot;1.共享栈存储结构表示&quot;&gt;&lt;/a&gt;1.共享栈存储结构表示&lt;/h4&gt;&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>顺序栈</title>
+    <link href="http://yanghuaigang666.github.io/posts/16399.html"/>
+    <id>http://yanghuaigang666.github.io/posts/16399.html</id>
+    <published>2020-06-04T11:10:53.000Z</published>
+    <updated>2020-06-04T11:58:02.468Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-存储结构描述&quot;&gt;&lt;a href=&quot;#1-存储结构描述&quot; class=&quot;headerlink&quot; title=&quot;1.存储结构描述&quot;&gt;&lt;/a&gt;1.存储结构描述&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性表之链式存储(单链表)</title>
+    <link href="http://yanghuaigang666.github.io/posts/28473.html"/>
+    <id>http://yanghuaigang666.github.io/posts/28473.html</id>
+    <published>2020-06-04T01:25:17.000Z</published>
+    <updated>2020-06-04T02:32:44.322Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-存储结构表示&quot;&gt;&lt;a href=&quot;#1-存储结构表示&quot; class=&quot;headerlink&quot; title=&quot;1.存储结构表示&quot;&gt;&lt;/a&gt;1.存储结构表示&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性表之顺序存储</title>
+    <link href="http://yanghuaigang666.github.io/posts/43013.html"/>
+    <id>http://yanghuaigang666.github.io/posts/43013.html</id>
+    <published>2020-06-04T01:23:19.000Z</published>
+    <updated>2020-06-04T02:33:12.260Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-顺序存储结构&quot;&gt;&lt;a href=&quot;#1-顺序存储结构&quot; class=&quot;headerlink&quot; title=&quot;1.顺序存储结构&quot;&gt;&lt;/a&gt;1.顺序存储结构&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本地项目上传到github</title>
+    <link href="http://yanghuaigang666.github.io/posts/31788.html"/>
+    <id>http://yanghuaigang666.github.io/posts/31788.html</id>
+    <published>2020-04-20T14:25:16.000Z</published>
+    <updated>2020-06-06T06:24:55.370Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-安装git&quot;&gt;&lt;a href=&quot;#1-安装git&quot; class=&quot;headerlink&quot; title=&quot;1 安装git&quot;&gt;&lt;/a&gt;1 安装git&lt;/h3&gt;&lt;p&gt; &lt;a href=&quot;https://git-scm.com/downloads&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yanghuaigang666.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://yanghuaigang666.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>property属性</title>
+    <link href="http://yanghuaigang666.github.io/posts/49650.html"/>
+    <id>http://yanghuaigang666.github.io/posts/49650.html</id>
+    <published>2020-04-20T06:24:10.000Z</published>
+    <updated>2020-04-20T14:09:16.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文描述的是python面向对象中的property属性。主要介绍property属性的两种定义方式：装饰器与类属性，以及怎么来调用，在实际开发过程中的应用场景。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/posts/49650/coding.jpg&quot; alt=&quot;&quot;&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yanghuaigang666.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://yanghuaigang666.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于hexo的blog搭建教程(二)</title>
+    <link href="http://yanghuaigang666.github.io/posts/10762.html"/>
+    <id>http://yanghuaigang666.github.io/posts/10762.html</id>
+    <published>2020-04-18T08:48:07.000Z</published>
+    <updated>2020-04-20T14:09:16.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文介绍hexo主题yilia的使用以及优化，使你的blog变得好看&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/posts/10762/head2.png&quot; alt=&quot;图片&quot;&gt; &lt;/p&gt;
+&lt;h3 id=&quot;1-安装yilia&quot;&gt;&lt;a href=&quot;#1-安装yilia&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="hexo" scheme="http://yanghuaigang666.github.io/tags/hexo/"/>
+    
+      <category term="yilia" scheme="http://yanghuaigang666.github.io/tags/yilia/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GIL</title>
+    <link href="http://yanghuaigang666.github.io/posts/28806.html"/>
+    <id>http://yanghuaigang666.github.io/posts/28806.html</id>
+    <published>2020-04-17T11:29:34.000Z</published>
+    <updated>2020-04-20T14:09:16.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这几天学习python多线程与多进程的时候，学习到了一个关于GIL（全局解释器锁）的相关东西，本文简单描述了一下为何有GIL，以及遇到GIL怎么解决他&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="python" scheme="http://yanghuaigang666.github.io/tags/python/"/>
+    
+  </entry>
+  
+</feed>
