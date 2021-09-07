@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yanghuaigang666.github.io/"/>
-  <updated>2020-04-20T14:09:16.000Z</updated>
+  <updated>2021-09-07T11:15:30.946Z</updated>
   <id>http://yanghuaigang666.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>科研思维的养成</title>
+    <link href="http://yanghuaigang666.github.io/posts/17472.html"/>
+    <id>http://yanghuaigang666.github.io/posts/17472.html</id>
+    <published>2021-09-06T14:29:15.000Z</published>
+    <updated>2021-09-07T11:15:30.946Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;第一、开展科研前的准备工作&quot;&gt;&lt;a href=&quot;#第一、开展科研前的准备工作&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="research" scheme="http://yanghuaigang666.github.io/categories/research/"/>
+    
+    
+      <category term="research" scheme="http://yanghuaigang666.github.io/tags/research/"/>
+    
+  </entry>
   
   <entry>
     <title>我的第一篇博客</title>
@@ -514,25 +541,6 @@
       <category term="hexo" scheme="http://yanghuaigang666.github.io/tags/hexo/"/>
     
       <category term="yilia" scheme="http://yanghuaigang666.github.io/tags/yilia/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GIL</title>
-    <link href="http://yanghuaigang666.github.io/posts/28806.html"/>
-    <id>http://yanghuaigang666.github.io/posts/28806.html</id>
-    <published>2020-04-17T11:29:34.000Z</published>
-    <updated>2020-04-20T14:09:16.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这几天学习python多线程与多进程的时候，学习到了一个关于GIL（全局解释器锁）的相关东西，本文简单描述了一下为何有GIL，以及遇到GIL怎么解决他&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="python" scheme="http://yanghuaigang666.github.io/tags/python/"/>
     
   </entry>
   
