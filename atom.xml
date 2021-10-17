@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yanghuaigang666.github.io/"/>
-  <updated>2021-09-07T11:15:30.946Z</updated>
+  <updated>2021-10-17T04:42:34.905Z</updated>
   <id>http://yanghuaigang666.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PageRank算法</title>
+    <link href="http://yanghuaigang666.github.io/posts/24469.html"/>
+    <id>http://yanghuaigang666.github.io/posts/24469.html</id>
+    <published>2021-10-17T01:55:27.000Z</published>
+    <updated>2021-10-17T04:42:34.905Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文介绍spark中重要组件之Graphx中经典算法PageRank算法（网页排名算法），是一种由搜索引擎根据网页之间相互的超链接计算的技术，而作为网页排名的要素之一，以Google公司创办人拉里·佩奇（Larry
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Graphx" scheme="http://yanghuaigang666.github.io/categories/Graphx/"/>
+    
+    
+      <category term="Spark" scheme="http://yanghuaigang666.github.io/tags/Spark/"/>
+    
+  </entry>
   
   <entry>
     <title>科研思维的养成</title>
@@ -512,35 +539,6 @@
     
     
       <category term="python" scheme="http://yanghuaigang666.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于hexo的blog搭建教程(二)</title>
-    <link href="http://yanghuaigang666.github.io/posts/10762.html"/>
-    <id>http://yanghuaigang666.github.io/posts/10762.html</id>
-    <published>2020-04-18T08:48:07.000Z</published>
-    <updated>2020-04-20T14:09:16.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;本文介绍hexo主题yilia的使用以及优化，使你的blog变得好看&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/posts/10762/head2.png&quot; alt=&quot;图片&quot;&gt; &lt;/p&gt;
-&lt;h3 id=&quot;1-安装yilia&quot;&gt;&lt;a href=&quot;#1-安装yilia&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="hexo" scheme="http://yanghuaigang666.github.io/tags/hexo/"/>
-    
-      <category term="yilia" scheme="http://yanghuaigang666.github.io/tags/yilia/"/>
     
   </entry>
   
