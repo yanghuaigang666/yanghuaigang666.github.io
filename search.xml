@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>科大讯飞农民身份识别挑战赛</title>
+      <link href="/posts/53228.html"/>
+      <url>/posts/53228.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-赛题介绍"><a href="#1-赛题介绍" class="headerlink" title="1 赛题介绍"></a>1 赛题介绍</h3><h4 id="1-1-赛题背景"><a href="#1-1-赛题背景" class="headerlink" title="1.1 赛题背景"></a>1.1 赛题背景</h4><p>机器虽然被大量用到农业生产中，但人还是不可或缺的因素。通过农民身份识别，可以真实客观地记录农民的状态，为农场管理和农产品追溯提供真实的客观数据；较之直接存储视频，可以有效地降低存储空间；自动识别也比人工监管，大幅度提高效率，减少人工成本。</p><h4 id="1-2-赛事任务"><a href="#1-2-赛事任务" class="headerlink" title="1.2 赛事任务"></a>1.2 赛事任务</h4><p>农民身份识别需要对农民进行分类，本次大赛提供了中国农业大学实验室视频制成的图像序列。参赛选手先对图像进行预处理，并制作样本，对图像中的农民进行识别。选手需要自行训练模型，并上传自己训练好的模型和权重。</p><h4 id="1-3-赛题数据集"><a href="#1-3-赛题数据集" class="headerlink" title="1.3 赛题数据集"></a>1.3 赛题数据集</h4><p>本次比赛为参赛选手提供了25名农民身份，每个身份包含10段视频制成的图像序列，包含训练样本22912个，测试样本6165个。另外选手可以添加样本补充数据集，通过对图像序列进行预处理，打标签，并对农民进行身份识别。</p><h4 id="1-4-数据说明"><a href="#1-4-数据说明" class="headerlink" title="1.4 数据说明"></a>1.4 数据说明</h4><p>选手可以自行收集样本集，自行去田地中录制人员行走的视频。自行收集样本集要求用手机或者摄像头拍摄，拍摄位置距离水平地面至少1.5m高。选手需要上传自行录制的样本集（也需要经过预处理，必须是图像序列）。</p><p>如下图为四张数据集图片，具体制作流程为使用不同高度和视角的摄像头采集人走路的视频片段，然后通过人体检测和人体分割算法得到人体剪影图像，最后将这些图像归一化为均匀大小。图片左边和右面的最后一个是同一个人在不同时刻的人体轮廓，因此身份匹配。图片略有简化，具体识别过程是通过轮廓序列进行识别。</p><p><img src="/posts/53228/data_dsc.png" alt=""></p><h4 id="1-5-评估指标（Macro-F1）"><a href="#1-5-评估指标（Macro-F1）" class="headerlink" title="1.5 评估指标（Macro-F1）"></a>1.5 评估指标（Macro-F1）</h4><p><img src="/posts/53228/confusion_matrix.png" alt=""></p><p>查准率（Precision）和查全率（Recall）可以通过混淆矩阵计算出来，而F1-score可以通过P和R计算出来。<br>$$<br>Precision =\frac{TP}{TP+FP} \<br>Recall =\frac{TP}{TP+FN} \<br>F_1= 2*\frac{P \times R}{P+R}<br>$$<br>宏平均（Macro-F1）为多个F1的算术平均，当样本数量不平衡时候，Macro-F1可以给所有类赋予相同的权重，相当于是加权的F1。</p><p><img src="/posts/53228/macro_f1.png" alt=""></p><p>同时还有微平均（Micro-F1）,使用场景如下：</p><ul><li>如果每类的样本数量相差不大，那么Macro-F1和Micro-F1相差不大</li><li>如果每类的样本数量相差很大，那么Macro-F1会注重样本多的类，而Micro-F1会注重样本量少的类</li></ul><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> precision_score<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> recall_score<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> accuracy_score<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> f1_score<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-Baseline（ResNet-18）"><a href="#2-Baseline（ResNet-18）" class="headerlink" title="2 Baseline（ResNet-18）"></a>2 Baseline（ResNet-18）</h3><h4 id="2-1-图像特征统计（传统方法）"><a href="#2-1-图像特征统计（传统方法）" class="headerlink" title="2.1 图像特征统计（传统方法）"></a>2.1 图像特征统计（传统方法）</h4><p>图像特征统计是指对图像中的像素或图像区域进行统计分析，以提取和描述图像的特征信息。</p><ul><li>占比特征：通过统计图像中不同像素值或颜色通道的像素数量，计算其在整个图像中的比例或占比。</li><li>边缘特征：边缘是图像中像素值或颜色发生剧烈变化的区域，通常表示物体的边界或纹理的边界。</li><li>纹理特征：描述了图像中的纹理信息，反映了图像的细节和结构。</li></ul><h4 id="2-2-CNN（深度学习方法）"><a href="#2-2-CNN（深度学习方法）" class="headerlink" title="2.2 CNN（深度学习方法）"></a>2.2 CNN（深度学习方法）</h4><p>在图像分类中，常用的特征提取方法是图像特征统计 或 使用卷积神经网络（CNN）。</p><ul><li>图像特征统计是指对图像中的像素或图像区域进行统计分析，以提取和描述图像的特征信息</li><li>CNN是一种专门设计用于处理图像数据的神经网络架构，能够有效地从原始像素中学习和提取特征。</li><li>通过一系列的卷积层、池化层和全连接层，CNN能够自动学习具有区分性的图像特征</li></ul><h3 id="3-改进"><a href="#3-改进" class="headerlink" title="3 改进"></a>3 改进</h3><ul><li>3.1 数据增强</li><li>3.2 优化器选择</li><li>3.3 TTA策略</li><li>3.4 超参数</li></ul><h4 id="4-结果"><a href="#4-结果" class="headerlink" title="4 结果"></a>4 结果</h4><p>打榜分数：</p><p>您当前最佳成绩为<strong>0.61222</strong>提交时间为 2023-08-06 18:43:41 具体成绩请前往提交结果页面,查看提交记录（注：以当前所在团队提交的最佳成绩为准）</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Classifiaction </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Image_Classifiaction AI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PageRank算法</title>
       <link href="/posts/24469.html"/>
       <url>/posts/24469.html</url>
