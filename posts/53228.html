@@ -453,8 +453,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Imag-Classifiaction/" class="post-category">
-                                Imag_Classifiaction
+                            <a href="/categories/Image-Classifiaction/" class="post-category">
+                                Image_Classifiaction
                             </a>
                         
                     </div>
@@ -473,21 +473,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-06
+                    2023-08-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -533,13 +533,212 @@
 <li>通过一系列的卷积层、池化层和全连接层，CNN能够自动学习具有区分性的图像特征</li>
 </ul>
 <h3 id="3-改进"><a href="#3-改进" class="headerlink" title="3 改进"></a>3 改进</h3><ul>
-<li>3.1 数据增强</li>
-<li>3.2 优化器选择</li>
-<li>3.3 TTA策略</li>
-<li>3.4 超参数</li>
+<li><p>3.1 数据增强</p>
+<ul>
+<li><p>基础数据增强</p>
+<p>随机裁剪、水平垂直翻转、HSV颜色变换、亮度、对比度变换、转灰度图</p>
+</li>
+<li><p>进阶数据增强</p>
+<p>Cutout、Mixup</p>
+</li>
 </ul>
+</li>
+<li><p>3.2 优化器选择</p>
+</li>
+<li><p>3.3 TTA策略</p>
+</li>
+<li><p>3.4 超参数</p>
+</li>
+<li><p>3.5 Backbone</p>
+<p>EfficientNet</p>
+</li>
+<li><p>训练策略</p>
+<ul>
+<li><p>K-fold训练</p>
+</li>
+<li><p>学习率调整策略</p>
+<p>ReduceLRnPlateau、LambdaLR</p>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">模型</th>
+<th align="center">Macro-F1-score</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ResNet-18</td>
+<td align="center">0.56538</td>
+<td align="center">baseline</td>
+</tr>
+<tr>
+<td align="center">ResNet-50</td>
+<td align="center">0.57975</td>
+<td align="center">baseline</td>
+</tr>
+<tr>
+<td align="center">ResNet-34</td>
+<td align="center">0.60719</td>
+<td align="center">StepLR（step=5）</td>
+</tr>
+<tr>
+<td align="center">ResNet-18</td>
+<td align="center">0.61222</td>
+<td align="center">aug + stepLR</td>
+</tr>
+<tr>
+<td align="center">ResNet-18</td>
+<td align="center">0.62934</td>
+<td align="center">label_smoothing+LR(ReduceLROnPlateau)</td>
+</tr>
+<tr>
+<td align="center">EfficientNet-B0</td>
+<td align="center">0.64962</td>
+<td align="center">label_smoothing</td>
+</tr>
+<tr>
+<td align="center">EfficientNet-B0</td>
+<td align="center">0.60132</td>
+<td align="center">label_smoothing+LR(ReduceLROnPlateau)</td>
+</tr>
+<tr>
+<td align="center">EfficientNet-B3</td>
+<td align="center">0.63782</td>
+<td align="center">label_smoothing+stepLR+clip_grad</td>
+</tr>
+<tr>
+<td align="center">EfficientNet-B3</td>
+<td align="center">0.5727</td>
+<td align="center">label_smoothing+LR(ReduceLROnPlateau)</td>
+</tr>
+<tr>
+<td align="center">resnext50_32x4d</td>
+<td align="center">0.60111</td>
+<td align="center">no tta</td>
+</tr>
+<tr>
+<td align="center">efficientNet_b4</td>
+<td align="center">0.63698</td>
+<td align="center">Kfold</td>
+</tr>
+<tr>
+<td align="center">resnext50+efficientNetB4</td>
+<td align="center">0.66165</td>
+<td align="center">tta+Kfold</td>
+</tr>
+<tr>
+<td align="center">resnext50+efficientNetB3</td>
+<td align="center">0.67709</td>
+<td align="center">tta3+kflod+labelSmooth+20epoch</td>
+</tr>
+<tr>
+<td align="center">resnext50+efficientNetB3+B4</td>
+<td align="center">0.67569</td>
+<td align="center">tta3+kflod+labelSmooth</td>
+</tr>
+<tr>
+<td align="center">efficientnetB4</td>
+<td align="center">0.6632</td>
+<td align="center">size128</td>
+</tr>
+<tr>
+<td align="center">resnext50</td>
+<td align="center">0.66561</td>
+<td align="center">size128</td>
+</tr>
+<tr>
+<td align="center">resnext50+efficientnetB4</td>
+<td align="center">0.67323</td>
+<td align="center">size128</td>
+</tr>
+<tr>
+<td align="center">vit</td>
+<td align="center">0.53823</td>
+<td align="center">size384</td>
+</tr>
+<tr>
+<td align="center">resnext50+efficientnetB4+vit</td>
+<td align="center">0.66046</td>
+<td align="center">tta=3</td>
+</tr>
+<tr>
+<td align="center">res18_resnext50_efficentB4</td>
+<td align="center">0.68084</td>
+<td align="center">tta=3</td>
+</tr>
+<tr>
+<td align="center">res18_resnext50_efficentB4_B0</td>
+<td align="center">0.67187</td>
+<td align="center">tta=5</td>
+</tr>
+<tr>
+<td align="center">res18_resnext50_efficentB4_B0_B3</td>
+<td align="center">0.66925</td>
+<td align="center">tta=3</td>
+</tr>
+<tr>
+<td align="center">resNet18</td>
+<td align="center">0.64659</td>
+<td align="center">strongAug + Non-tta</td>
+</tr>
+<tr>
+<td align="center">efficientnetB4</td>
+<td align="center"><strong>0.69362</strong></td>
+<td align="center">strongAug + Non-tta</td>
+</tr>
+<tr>
+<td align="center">resnext50</td>
+<td align="center">0.68905</td>
+<td align="center">strongAug + Non-tta</td>
+</tr>
+<tr>
+<td align="center">res18_resnext50_efficentB4</td>
+<td align="center"><strong>0.69722</strong></td>
+<td align="center">strongAug + tta3</td>
+</tr>
+<tr>
+<td align="center">resnext50_efficentB4</td>
+<td align="center"><strong>0.6992</strong></td>
+<td align="center">strongAug + tta3</td>
+</tr>
+</tbody></table>
 <h4 id="4-结果"><a href="#4-结果" class="headerlink" title="4 结果"></a>4 结果</h4><p>打榜分数：</p>
 <p>您当前最佳成绩为<strong>0.61222</strong>提交时间为 2023-08-06 18:43:41 具体成绩请前往提交结果页面,查看提交记录（注：以当前所在团队提交的最佳成绩为准）</p>
+<h4 id="5-Pipeline"><a href="#5-Pipeline" class="headerlink" title="5 Pipeline"></a>5 Pipeline</h4><ol>
+<li><p>数据样本分析（获取先验知识）</p>
+<ul>
+<li><p>是否存在类别不平衡</p>
+<blockquote>
+<p>解决方法：</p>
+<ul>
+<li><p>数据增强增加类别少的样本</p>
+</li>
+<li><p>控制损失函数</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>数据探索性分析（Exploratory Data Analysis，EDA）</p>
+</li>
+<li><p>是否有噪声标签（Noisy Label）：某些样本的标签有误</p>
+</li>
+</ul>
+</li>
+<li><p>数据预处理</p>
+</li>
+<li><p>模型选择（Baseline）</p>
+</li>
+<li><p>交叉验证（Cross Validation，CV）</p>
+</li>
+<li><p>模型融合（Model Ensemble）</p>
+</li>
+<li><p>测试时数据增强（Test-Time Augmentation，TTA）</p>
+</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -927,48 +1126,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/53228.html">
+                <a href="/posts/35926.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="科大讯飞农民身份识别挑战赛">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="科研论文配图系列[第一章]">
                         
-                        <span class="card-title">科大讯飞农民身份识别挑战赛</span>
+                        <span class="card-title">科研论文配图系列[第一章]</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1 赛题介绍1.1 赛题背景机器虽然被大量用到农业生产中，但人还是不可或缺的因素。通过农民身份识别，可以真实客观地记录农民的状态，为农场管理
+                            
+注意：
+
+新版必须先导入scienceplots才能绘图
+如果不想装Latex那一堆依赖，可以不依赖Latex渲染
+实际latex绘图中以
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-15
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Imag-Classifiaction/" class="post-category">
-                                    Imag_Classifiaction
+                            <a href="/categories/matplotlib/" class="post-category">
+                                    matplotlib
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/AI/">
-                        <span class="chip bg-color">AI</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -1170,7 +1372,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.2k</span>&nbsp;字
+                class="white-color">23.7k</span>&nbsp;字
             
             
             

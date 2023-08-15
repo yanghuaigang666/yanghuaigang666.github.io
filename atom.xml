@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yanghuaigang666.github.io/"/>
-  <updated>2023-08-06T11:24:08.101Z</updated>
+  <updated>2023-08-15T12:59:49.269Z</updated>
   <id>http://yanghuaigang666.github.io/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>科研论文配图系列[第一章]</title>
+    <link href="http://yanghuaigang666.github.io/posts/35926.html"/>
+    <id>http://yanghuaigang666.github.io/posts/35926.html</id>
+    <published>2023-08-15T12:09:19.000Z</published>
+    <updated>2023-08-15T12:59:49.269Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;新版必须先导入scienceplots才能绘图&lt;/li&gt;
+&lt;li&gt;如果不想装Latex那一堆依赖，可以不依赖Latex渲染&lt;/li&gt;
+&lt;li&gt;实际latex绘图中以pdf文件居多，
+        
+      
+    
+    </summary>
+    
+    
+      <category term="matplotlib" scheme="http://yanghuaigang666.github.io/categories/matplotlib/"/>
+    
+    
+      <category term="python" scheme="http://yanghuaigang666.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>科大讯飞农民身份识别挑战赛</title>
     <link href="http://yanghuaigang666.github.io/posts/53228.html"/>
     <id>http://yanghuaigang666.github.io/posts/53228.html</id>
     <published>2023-08-06T08:58:06.000Z</published>
-    <updated>2023-08-06T11:24:08.101Z</updated>
+    <updated>2023-08-13T08:02:08.464Z</updated>
     
     <summary type="html">
     
@@ -36,7 +68,7 @@
     </summary>
     
     
-      <category term="Imag_Classifiaction" scheme="http://yanghuaigang666.github.io/categories/Imag-Classifiaction/"/>
+      <category term="Image_Classifiaction" scheme="http://yanghuaigang666.github.io/categories/Image-Classifiaction/"/>
     
     
       <category term="AI" scheme="http://yanghuaigang666.github.io/tags/AI/"/>
@@ -511,33 +543,6 @@
     
     
       <category term="数据结构" scheme="http://yanghuaigang666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>本地项目上传到github</title>
-    <link href="http://yanghuaigang666.github.io/posts/31788.html"/>
-    <id>http://yanghuaigang666.github.io/posts/31788.html</id>
-    <published>2020-04-20T14:25:16.000Z</published>
-    <updated>2020-06-06T06:24:55.370Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-安装git&quot;&gt;&lt;a href=&quot;#1-安装git&quot; class=&quot;headerlink&quot; title=&quot;1 安装git&quot;&gt;&lt;/a&gt;1 安装git&lt;/h3&gt;&lt;p&gt; &lt;a href=&quot;https://git-scm.com/downloads&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="git" scheme="http://yanghuaigang666.github.io/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://yanghuaigang666.github.io/tags/git/"/>
     
   </entry>
   
